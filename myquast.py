@@ -34,7 +34,8 @@ for i in list_contigs:
     if N50_value + i < N50_thresh:
         N50_value = N50_value + i
         N50_list.append(i)
-    elif N50_value >= N50_thresh:
+    elif N50_value + i >= N50_thresh:
+        N50_list.append(i)
         break
 
 print('Number of contigs: ', len(contig_count))
